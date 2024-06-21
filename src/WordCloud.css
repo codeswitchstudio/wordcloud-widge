@@ -1,0 +1,58 @@
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+svg {
+  border-style: inherit;
+}
+
+h1 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.wordcloud text {
+  font-family: "Arial", sans-serif;
+  font-weight: ;
+}
+
+.wordcloud .word0 {
+  fill: #1f77b4;
+}
+.wordcloud .word1 {
+  fill: #0c2a6b;
+}
+.wordcloud .word2 {
+  fill: #2ca02c;
+}
+.wordcloud .word3 {
+  fill: #9fe03d;
+}
+.wordcloud .word4 {
+  fill: #7ed9ee;
+}
+.wordcloud .word5 {
+  fill: #8c564b;
+}
+.wordcloud .word6 {
+  fill: #e377c2;
+}
+.wordcloud .word7 {
+  fill: #7f7f7f;
+}
+.wordcloud .word8 {
+  fill: #bcbd22;
+}
+.wordcloud .word9 {
+  fill: #17becf;
+}
+
+/* Adjust font size for better readability */
+.wordcloud text {
+  font-size: 20px; /* Default font size */
+}

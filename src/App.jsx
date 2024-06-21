@@ -1,15 +1,28 @@
-import React from "react";
-import { render } from "react-dom";
-import WordCloud from "react-d3-cloud";
+import React, { useState, useEffect } from "react";
+import WordCloud from "./WordCloud.jsx";
+import "./WordCloud.css";
 
-const data = [
-  { text: "Hey", value: 1000 },
-  { text: "lol", value: 200 },
-  { text: "first impression", value: 800 },
-  { text: "very cool", value: 1000000 },
-  { text: "duck", value: 10 },
-];
+const App = () => {
+  const [data, setData] = useState([]);
 
-render(<WordCloud data={data} />, document.getElementById("root"));
+  useEffect(() => {
+    fetch("/sample-words.json")
+      .then((response) => response.json())
+      .then((json) => {
+        const filteredData = json
+          .filter((item) => item.text && item.frequency > 0)
+          .map((item) => ({ text: item.text, frequency: item.frequency }));
+        setData(filteredData);
+      })
+      .catch((error) => console.error("Error fetching the data:", error));
+  }, []);
 
-export default App;
+  return (
+    <div>
+      <h1>Word Cloud</h1>
+      <WordCloud data={data} />
+    </div>
+  );
+};
+
+export default App; // Ensure App is the default export
