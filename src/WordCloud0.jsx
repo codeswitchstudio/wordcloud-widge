@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import cloud from "d3-cloud";
-import "./WordCloud.css"; //
 
 const WordCloud = () => {
   const svgRef = useRef();
@@ -28,9 +27,9 @@ const WordCloud = () => {
     const layout = cloud()
       .size([800, 400])
       .words(wordCounts)
-      .padding(2)
-      .rotate(() => ~~(Math.random() * 2))
-      .font("Quicksand")
+      .padding(5)
+      .rotate(() => ~~(Math.random() * 2) * 90)
+      .font("Impact")
       .fontSize((d) => d.value * 5) // Adjust font size scaling as needed
       .on("end", draw);
 
@@ -53,10 +52,9 @@ const WordCloud = () => {
         .enter()
         .append("text")
         .style("font-size", (d) => `${d.size}px`)
-        .style("font-family", "Quicksand")
+        .style("font-family", "Impact")
         .style("fill", (d, i) => d3.schemeCategory10[i % 10])
         .attr("text-anchor", "middle")
-        .attr("class", (d, i) => `word${i % 5}`) // Assign classes for color
         .attr("transform", (d) => `translate(${d.x},${d.y})rotate(${d.rotate})`)
         .text((d) => d.text);
     }

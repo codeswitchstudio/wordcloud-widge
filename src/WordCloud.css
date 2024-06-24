@@ -12,13 +12,13 @@ svg {
 }
 
 h1 {
-  font-family: "Arial", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
 }
 
 .wordcloud text {
-  font-family: "Arial", sans-serif;
-  font-weight: ;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 20;
 }
 
 .wordcloud .word0 {
@@ -37,7 +37,7 @@ h1 {
   fill: #7ed9ee;
 }
 .wordcloud .word5 {
-  fill: #8c564b;
+  fill: #664b8c;
 }
 .wordcloud .word6 {
   fill: #e377c2;
