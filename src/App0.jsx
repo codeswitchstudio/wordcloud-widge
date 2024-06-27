@@ -7,7 +7,7 @@ const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/sample-words.json")
+    fetch("/Carl Rogers")
       .then((response) => response.json())
       .then((json) => {
         const filteredData = json

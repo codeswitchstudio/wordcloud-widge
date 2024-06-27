@@ -1,58 +1,78 @@
 body {
-  /* display: flex;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; */
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
+  flex-direction: column; /* Stack the SVG and slider vertically */
 }
 
+.wordcloud-container text {
+  cursor: pointer;
+}
+
+WordCloud.css .wordcloud-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+/* 
 svg {
-  border-style: inherit;
+  border: 1px solid #ccc; 
+
+} */
+
+.slider-container {
+  margin-top: 10px; /* Space between the SVG and the slider */
 }
 
-h1 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
+/* WordCloud.css */
+.word-cloud text {
+  font-family: Quicksand;
 }
 
-.wordcloud text {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 20;
+.word0 {
+  fill: #1f77b4; /* Color 1 */
 }
 
-.wordcloud .word0 {
-  fill: #1f77b4;
+.word1 {
+  fill: #2ca02c; /* Color 2 */
 }
-.wordcloud .word1 {
-  fill: #0c2a6b;
+
+.word2 {
+  fill: #17becf; /* Color 3 */
 }
-.wordcloud .word2 {
-  fill: #2ca02c;
+
+.word3 {
+  fill: #44a0a1; /* Color 4 */
 }
-.wordcloud .word3 {
-  fill: #9fe03d;
+
+.word4 {
+  fill: #9467bd; /* Color 5 */
 }
-.wordcloud .word4 {
-  fill: #7ed9ee;
+
+.word5 {
+  fill: #4b8c79;
 }
-.wordcloud .word5 {
-  fill: #664b8c;
-}
-.wordcloud .word6 {
+.word6 {
   fill: #e377c2;
 }
-.wordcloud .word7 {
+.word7 {
   fill: #7f7f7f;
 }
-.wordcloud .word8 {
+.word8 {
   fill: #bcbd22;
 }
-.wordcloud .word9 {
-  fill: #17becf;
+.word9 {
+  fill: #7ed9ee;
 }
 
 /* Adjust font size for better readability */
 .wordcloud text {
   font-size: 20px; /* Default font size */
+}
+
+.slider-container {
+  padding-top: 50px;
+  text-align: center;
 }
